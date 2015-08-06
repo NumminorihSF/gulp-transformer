@@ -86,10 +86,13 @@ describe('StreamTransformer', function(){
 
     });
 
-    it('works file steam correctly', function(done){
+    it('works with file stream correctly', function(done){
       beforeEach();
       var buffer = new Buffer(bigChunk, 'utf8');
-      var file = {contents: buffer};
+      var file = {
+        contents: buffer,
+        isNull: function(){}
+      };
       var current = [];
       stream.push = function(data){
         current.push(data.contents);
@@ -102,7 +105,26 @@ describe('StreamTransformer', function(){
           done();
         });
       });
+    });
 
+    it('works with null file stream correctly', function(done){
+      beforeEach();
+      var file = {
+        contents: null,
+        isNull: function(){return true;}
+      };
+      var current;
+      stream.push = function(data){
+        current = (data.contents);
+      };
+      stream._transform(file, 'utf8', function(err){
+        stream._flush(function(err2) {
+          expect(err).to.not.exist;
+          expect(err2).to.not.exist;
+          expect(current).to.be.equal(null);
+          done();
+        });
+      });
     });
 
     it('works with error from transformLine function  as it should', function(done){
