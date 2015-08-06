@@ -134,7 +134,7 @@ Base transforms are:
 
 Run tests
 ```sh
-npm test
+npm run console-test
 ```
 
 To check code coverage:
