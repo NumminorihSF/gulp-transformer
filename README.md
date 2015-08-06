@@ -25,7 +25,7 @@ gulp.task('translate', function() {
 
   langs.forEach(function(lang){
     gulp.src('src/file/path')
-      .pipe(transform(options))
+      .pipe(translate (options))
       .pipe(gulp.dest('dest/file/path/' + lang));
   });
 });
