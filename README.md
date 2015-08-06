@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/NumminorihSF/gulp-transformer.svg?branch=master)](https://travis-ci.org/NumminorihSF/gulp-transformer)
 [![Coverage Status](https://coveralls.io/repos/NumminorihSF/gulp-transformer/badge.svg?branch=master&service=github)](https://coveralls.io/github/NumminorihSF/gulp-transformer?branch=master)
 
 # Gulp Transformer
