@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/NumminorihSF/gulp-transformer/badge.svg?branch=master&service=github)](https://coveralls.io/github/NumminorihSF/gulp-transformer?branch=master)
+
 # Gulp Transformer
 
 Make your files for many languages (locales) with it.
