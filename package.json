@@ -1,0 +1,38 @@
+{
+  "name": "gulp-transformer",
+  "version": "0.9.1",
+  "description": "Translate files by locale's dictionary translations and some other transforms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/_mocha -- --recursive",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- --recursive",
+    "postcoverage": "istanbul report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NumminorihSF/gulp-transformer.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "i18n",
+    "locale",
+    "html",
+    "translate",
+    "transform",
+    "gulp",
+    "replace"
+  ],
+  "author": "Konstantine Petryaev <numminorihsf@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NumminorihSF/gulp-transformer/issues"
+  },
+  "homepage": "https://github.com/NumminorihSF/gulp-transformer#readme",
+  "dependencies": {
+    "yamljs": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
