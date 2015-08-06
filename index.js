@@ -58,7 +58,7 @@ var plugin = function (options) {
     transform: options.transform
   });
 
-  return new StreamTransformer(lineTransformer);
+  return new StreamTransformer(lineTransformer, { objectMode: true });
 };
 
 module.exports = plugin;

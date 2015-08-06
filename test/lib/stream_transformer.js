@@ -18,7 +18,8 @@ describe('StreamTransformer', function(){
         return line;
       }
     };
-    stream = new StreamTransformer(woTrans);
+
+    stream = new StreamTransformer(woTrans, {objectMode: true});
     output = new s.Writable();
     data = '';
     output._write = function(chunk, en, callback){
@@ -82,6 +83,25 @@ describe('StreamTransformer', function(){
         });
       });
 
+
+    });
+
+    it('works file steam correctly', function(done){
+      beforeEach();
+      var buffer = new Buffer(bigChunk, 'utf8');
+      var file = {contents: buffer};
+      var current = [];
+      stream.push = function(data){
+        current.push(data.contents);
+      };
+      stream._transform(file, 'utf8', function(err){
+        stream._flush(function(err2) {
+          expect(err).to.not.exist;
+          expect(err2).to.not.exist;
+          expect(Buffer.concat(current)).to.deep.equal(buffer);
+          done();
+        });
+      });
 
     });
 
