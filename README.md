@@ -140,7 +140,7 @@ npm test
 To check code coverage:
   * Install [istanbul](https://github.com/gotwarlost/istanbul) global
 ```sh
-sudo npm install -h istanbul
+sudo npm install -g istanbul
 ```
 
   * Run npm script
