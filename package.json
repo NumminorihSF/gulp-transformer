@@ -4,7 +4,7 @@
   "description": "Translate files by locale's dictionary translations and some other transforms.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/_mocha -- --recursive",
+    "test": "node_modules/.bin/_mocha --recursive",
     "coverage": "istanbul cover node_modules/.bin/_mocha -- --recursive",
     "postcoverage": "istanbul report"
   },
