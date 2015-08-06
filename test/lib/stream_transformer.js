@@ -115,7 +115,7 @@ describe('StreamTransformer', function(){
       };
       var current;
       stream.push = function(data){
-        current = (data.contents);
+        current = (data);
       };
       stream._transform(file, 'utf8', function(err){
         stream._flush(function(err2) {
