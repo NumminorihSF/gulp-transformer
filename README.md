@@ -113,21 +113,23 @@ options = {
 By default it using angular-like syntax. Expressions in `{{}}` with ` | translate `
 transformer will be translated.
 
-Following examples assume that "some" in locales equals "My bIg StRing tO trAnsfOrm."
+Following examples assume that "some" in locales equals "My bIg StRing tO trAnsfOrm. Let's Do "
 
 Example:
 
-`'{{ some | translate }}'` transforms to "My bIg StRing tO trAnsfOrm."
+`'{{ some | translate }}'` transforms to "My bIg StRing tO trAnsfOrm. Let's Do "
 
 You can use another base transforms. Or if you want - specify yours.
 
 Base transforms are:
-  * translate: `'{{ some | translate }}'` transforms to "My bIg StRing tO trAnsfOrm."
-  * uppercase: `'{{ some | translate | uppercase }}'` transforms to "MY BIG STRING TO TRANSFORM."
-  * lowercase: `'{{ some | translate | lowercase }}'` transforms to "my big string to transform."
-  * capitalize: `'{{ some | translate | capitalize }}'` transforms to "My big string to transform."
-  * capitalizeEvery: `'{{ some | translate | capitalizeEvery}}'` transforms to "My Big String To Transform."
-  * reverse: `'{{ some | translate | reverse }}'` transforms to ".mrOfsnArt Ot gniRtS gIb yM"
+  * translate: `'{{ some | translate }}'` transforms to "My bIg StRing tO trAnsfOrm. Let's Do "
+  * uppercase: `'{{ some | translate | uppercase }}'` transforms to "MY BIG STRING TO TRANSFORM. LET'S DO "
+  * lowercase: `'{{ some | translate | lowercase }}'` transforms to "my big string to transform. let's do "
+  * capitalize: `'{{ some | translate | capitalize }}'` transforms to "My big string to transform. let's do "
+  * capitalizeEvery: `'{{ some | translate | capitalizeEvery}}'` transforms to "My Big String To Transform. Let'S Do "
+  * capitalizeDot: `'{{ some | translate | capitalizeDot}}'` transforms to "My big string to transform. Let's do "
+  * trim: `'{{ some | translate | trim}}'` transforms to "My big string to transform. Let's Do"
+  * reverse: `'{{ some | translate | reverse }}'` transforms to " oD s'teL .mrOfsnArt Ot gniRtS gIb yM"
   
 
 ## Test

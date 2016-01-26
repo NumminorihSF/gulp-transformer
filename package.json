@@ -1,6 +1,6 @@
 {
   "name": "gulp-transformer",
-  "version": "0.9.7",
+  "version": "0.10.1",
   "description": "Translate files by locale's dictionary translations and some other transforms.",
   "main": "index.js",
   "scripts": {

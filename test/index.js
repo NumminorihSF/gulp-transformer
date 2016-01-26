@@ -4,7 +4,6 @@ var s = require('stream');
 
 describe('GulpLocaleTransform', function(){
 
-
   it('transforms if need', function(done){
     var pathToChunk = __dirname + '/_etc/to_translate';
     var pathToTransformed = __dirname + '/_etc/to_equal';

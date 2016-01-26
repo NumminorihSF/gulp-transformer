@@ -125,6 +125,67 @@ describe('LineTransformer', function(){
 
   });
 
+  describe('#capitalizeDot()', function(){
+
+    it('capitalize one word', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser.')).to.be.equal('Adser.');
+      done();
+    });
+
+    it('capitalize one word if there are 2', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser some.')).to.be.equal('Adser some.');
+      done();
+    });
+
+    it('capitalize first words at 2 sentences with "."', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser some. none')).to.be.equal('Adser some. None');
+      done();
+    });
+
+    it('capitalize first words at 2 sentences with "!"', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser some! none')).to.be.equal('Adser some! None');
+      done();
+    });
+
+    it('capitalize first words at 2 sentences with "?"', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser some? none')).to.be.equal('Adser some? None');
+      done();
+    });
+
+    it('capitalize first word after "." without space', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser some.none')).to.be.equal('Adser some.None');
+      done();
+    });
+
+    it('capitalize first work after "." with many spaces', function (done) {
+      expect(LineTransformer.prototype.capitalizeDot('adser some.    none')).to.be.equal('Adser some.    None');
+      done();
+    });
+  });
+
+  describe('#trim()', function(){
+
+    it('do nothing if no spaces', function(){
+      expect(LineTransformer.prototype.trim('werfr')).to.be.equal('werfr');
+    });
+
+    it('remove spaces before word', function(){
+      expect(LineTransformer.prototype.trim('   werfr')).to.be.equal('werfr');
+    });
+
+    it('remove spaces after word', function(){
+      expect(LineTransformer.prototype.trim('werfr   ')).to.be.equal('werfr');
+    });
+
+    it('remove spaces before and after', function(){
+      expect(LineTransformer.prototype.trim('   werfr   ')).to.be.equal('werfr');
+    });
+
+    it('do nothing if spaces are in the middle', function(){
+      expect(LineTransformer.prototype.trim('werfr   werfr')).to.be.equal('werfr   werfr');
+    });
+
+  });
 
   describe('#capitalizeEvery()', function(){
 
