@@ -1,6 +1,6 @@
 {
   "name": "gulp-transformer",
-  "version": "0.10.1",
+  "version": "1.0.1",
   "description": "Translate files by locale's dictionary translations and some other transforms.",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,10 @@
   },
   "homepage": "https://github.com/NumminorihSF/gulp-transformer#readme",
   "dependencies": {
+    "gulp-util": "^3.0.7",
+    "object-assign": "^4.0.1",
+    "through2": "^2.0.1",
+    "vinyl-sourcemaps-apply": "^0.2.1",
     "yamljs": "^0.2.1"
   },
   "devDependencies": {
